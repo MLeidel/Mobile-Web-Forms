@@ -1,0 +1,251 @@
+
+  /* BEGIN FORM STYLES DARK */
+
+  :root {
+    --selected: Cornsilk;   /* color for checkbox/radio selected */
+    --unselected: #AAA; /* color for checkbox/radio unselected */
+    --button-bkg: #AAA; /* button background color */
+    --button-clr: black;  /* button text color */
+    --button-hov: Cornsilk; /* button hover text color */
+    --button-hov-bg: #666; /* button hover background */
+    --button-rad: 5px; /* button corner radius */
+    --label-hov: #444;  /* hover over radio or check label */
+    --borders: #ccc; /*text, textarea, select border color */
+    --table-row-1: #666;
+    --table-row-2: #333;
+    --anchor-clr: Cornsilk;
+
+    --link-sel: white;
+    --link-bkg: lightyellow; /* not using here */
+    --link-hov: #777;
+    --link-border: white;
+    --link-color: cornsilk;
+    --link-pad: 4px;
+    --link-active: #777;
+    --link-rad: 4px;
+  }
+
+  input[type=checkbox] {
+    zoom: 1.5;
+    vertical-align: middle;
+  }
+
+  input[type=radio] {
+    zoom: 1.2;
+   vertical-align: middle;
+  }
+
+  label:hover {
+    background: var(--label-hov);
+  }
+
+  input[type=checkbox] + label,
+  input[type=radio] + label {
+    color: var(--unselected);
+    font-style: italic;
+  }
+
+  input[type=checkbox]:checked + label,
+  input[type=radio]:checked + label {
+    color: var(--selected);
+    font-style: normal;
+  }
+
+  label {
+  		/* zoom: 1.5; */  /* make all bigger or smaller */
+  		vertical-align: middle;
+  }
+
+  input[type=button],
+  input[type=submit],
+  input[type=file] {
+    background-color: var(--button-bkg);
+    border: none;
+    color: var(--button-clr);
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font: inherit;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: var(--button-rad);
+
+		-webkit-box-shadow:3px 3px 3px #666;
+		-moz-box-shadow:3px 3px 3px #666;
+		box-shadow:3px 3px 3px #666;
+  }
+
+  input[type=button]:enabled:hover,
+  input[type=submit]:enabled:hover {
+    color: var(--button-hov);
+    background: var(--button-hov-bg);
+  }
+
+  input[type=button]:disabled,
+  input[type=submit]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  a {
+    color: var(--anchor-clr);
+  }
+  a:hover {
+    text-decoration: none;
+    /*background: var(--button-bkg);*/
+    color: var(--button-hov);
+  }
+  a:hover:active,
+  input[type=button]:enabled:active,
+  input[type=submit]:enabled:active {
+    background-color: var(--button-clr);
+  }
+
+  input[type=text],
+  input[type=date],
+  input[type=search],
+  input[type=email],
+  input[type=tel],
+  input[type=number],
+  input[type=password]
+  {
+   vertical-align: middle;
+   box-sizing: border-box;
+   padding:4px;
+   font: inherit;
+   margin: 4px 2px;
+   border: thin solid var(--borders);
+   border-radius: var(--button-rad);
+  }
+
+  textarea, select, fieldset {
+   box-sizing: border-box;
+   padding:4px;
+   font: inherit;
+   margin: 4px 2px;
+   border: thin solid var(--borders);
+   border-radius: var(--button-rad)
+  }
+
+  select {
+    background: var(--label-hov);
+    color: var(--selected);
+  }
+
+  fieldset {
+    display: inline-block;
+    width: 300px;
+  }
+
+  table, td {
+    border-collapse: collapse;
+    padding:4px;
+    font: inherit;
+    margin: 4px 2px;
+    /*border: thin solid var(--borders);*/
+  	/*border-radius: var(--button-rad)*/
+  }
+
+  tr:nth-child(even) {background: var(--table-row-2)}
+  tr:nth-child(odd) {background: var(--table-row-1)}
+  tr:nth-child(odd):hover {background: var(--button-clr)}
+  tr:nth-child(even):hover {background: var(--button-clr)}
+  td {border: none;}
+
+  ::-moz-selection { background: var(--button-clr); }
+  ::selection { background: var(--button-clr); } /* not work in Chrome */
+
+  /* ACCORDION */
+
+  details {
+      border: 1px solid #aaa;
+      border-radius: 6px;
+      padding: .5em .5em 0;
+      width: 300px;
+  }
+  summary {
+      font-weight: bold;
+      margin: -.5em -.5em 0;
+      padding: .5em;
+      /*margin: 1em;*/
+  }
+  summary:hover {
+    cursor: pointer;
+  }
+  details[open] {
+      padding: .5em;
+  }
+  details[open] summary {
+      border-bottom: 1px solid #aaa;
+      margin-bottom: .5em;
+  }
+
+  /* CUSTOM LINK STYLES */
+
+  .link1 {
+    color: var(--link-color);
+    padding: var(--link-pad);
+    border-radius: var(--link-rad);
+  }
+  .link1:active {
+    text-decoration: none;
+  }
+
+  .link2 {
+    color: var(--link-color);
+    text-decoration: none;
+    padding: var(--link-pad);
+    border-radius: var(--link-rad);
+  }
+  .link2:active {
+    background: var(--link-active);
+    color: var(--link-sel);
+  }
+
+  .link3 {
+    color: var(--link-color);
+    text-decoration: none;
+    padding: var(--link-pad);
+    border-radius: var(--link-rad);
+  }
+  .link3:active {
+    background: var(--link-active);
+    color: var(--link-sel);
+  }
+  .link3:hover {
+    text-decoration: underline;
+  }
+
+  .link4 {
+    color: var(--link-color);
+    text-decoration: none;
+    padding: var(--link-pad);
+    border-radius: var(--link-rad);
+  }
+  .link4:active {
+    color: var(--link-sel);
+    text-decoration: underline;
+  }
+  .link4:hover {
+    background: var(--link-hov);
+    padding: var(--link-pad);
+    border-radius: var(--link-rad);
+  }
+
+  .link5 {
+    background-color: var(--button-bkg);
+    border: none;
+    color: var(--button-clr);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: var(--button-rad);
+  }
+  .link5:hover {
+    color: var(--button-hov);
+    background: var(--button-hov-bg);
+  }
+
+   /* END  FORM STYLES DARK */
+

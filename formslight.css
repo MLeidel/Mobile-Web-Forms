@@ -1,0 +1,264 @@
+
+  :root {
+    /* color for checkbox/radio selected */
+    --selected: #000;
+    /* color for checkbox/radio unselected */
+    --unselected: #999;
+    /* button background & link hover */
+    --button-bkg: #999;
+    /* button text color and button active */
+    --button-clr: black;
+    /* button hover text color */
+    --button-hov: white;
+    /* button hover background */
+    --button-hov-bg: #666;
+    /* button corner radius */
+    --button-rad: 5px;
+    /* shadow around button types  0=none */
+    --button-shadow: 3px 3px 3px #ccc;
+    /* hover over radio or check label */
+    --label-hov: #DEEDEE;
+    /* text, textarea, select border color */
+    --borders: #ccc;
+    /* alternating table row backgrounds */
+    --table-row-1: #FFF;
+    --table-row-2: #DDD;
+    /* hypertext link styling */
+    --link-sel: white;
+    --link-act: gray;
+    --link-hov: #777;
+    --link-border: white;
+    --link-color: black;
+    --link-pad: 4px;
+    --link-active: #777;
+    --link-rad: 4px;
+  }
+
+  input[type=checkbox] {
+    zoom: 1.5;
+    vertical-align: middle;
+  }
+
+  input[type=radio]{
+    zoom: 1.2;
+    vertical-align: middle;
+  }
+
+  label:hover {
+    background: var(--label-hov);
+  }
+
+  input[type=checkbox] + label,
+  input[type=radio] + label {
+    color: var(--unselected);
+    font-style: italic;
+  }
+
+  input[type=checkbox]:checked + label,
+  input[type=radio]:checked + label {
+    color: var(--selected);
+    font-style: normal;
+  }
+
+
+  label {
+  		/* zoom: 1.5; */  /* make all bigger or smaller */
+  		vertical-align: middle;
+  }
+
+  input[type=button],
+  input[type=submit],
+  input[type=file] {
+    background-color: var(--button-bkg);
+    border: none;
+    color: var(--button-clr);
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font: inherit;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: var(--button-rad);
+
+		-webkit-box-shadow: var(--button-shadow);
+		-moz-box-shadow: var(--button-shadow);
+		box-shadow: var(--button-shadow);
+  }
+
+  input[type=button]:enabled:hover,
+  input[type=submit]:enabled:hover {
+    color: var(--button-hov);
+    background: var(--button-hov-bg);
+  }
+
+  input[type=button]:disabled,
+  input[type=submit]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  a { color: var(--link-color); }
+  a:hover {
+    text-decoration: none;
+    /*background: var(--button-bkg);*/
+    color: var(--link-hov);
+  }
+  a:hover:active {
+    color: var(--link-bkg);
+  }
+
+  input[type=button]:enabled:active,
+  input[type=submit]:enabled:active {
+    background: var(--button-clr);
+    color: var(--button-hov);
+  }
+
+  input[type=text],
+  input[type=date],
+  input[type=search],
+  input[type=email],
+  input[type=tel],
+  input[type=number],
+  input[type=password]
+  {
+   vertical-align: middle;
+   box-sizing: border-box;
+   padding:4px;
+   font: inherit;
+   margin: 4px 2px;
+   border: thin solid var(--borders);
+   border-radius: var(--button-rad);
+  }
+
+  textarea, select, fieldset {
+   box-sizing: border-box;
+   padding:4px;
+   font: inherit;
+   margin: 4px 2px;
+   border: thin solid var(--borders);
+   border-radius: var(--button-rad);
+  }
+
+  select {
+    background: var(--label-hov);
+    color: var(--selected);
+  }
+
+  fieldset {
+    display: inline-block;
+    width: 300px;
+  }
+
+  table, td {
+    border-collapse: collapse;
+    padding:4px;
+    font: inherit;
+    margin: 4px 2px;
+    /*border: thin solid var(--borders);*/
+  	/*border-radius: var(--button-rad)*/
+  }
+
+  tr:nth-child(even) {background: var(--table-row-2)}
+  tr:nth-child(odd) {background: var(--table-row-1)}
+  tr:nth-child(odd):hover {background: var(--button-bkg)}
+  tr:nth-child(even):hover {background: var(--button-bkg)}
+  td {border: none;}
+
+  ::-moz-selection { background: var(--selected); }
+  ::selection { background: var(--selected); } /* not work in Chrome */
+
+  /* ACCORDION */
+
+  details {
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      padding: .5em .5em 0;
+      width: 300px;
+  }
+  summary {
+      font-weight: bold;
+      margin: -.5em -.5em 0;
+      padding: .5em;
+      /*margin: 1em;*/
+  }
+  summary:hover {
+      cursor: pointer;
+  }
+  details[open] {
+      padding: .5em;
+  }
+  details[open] summary {
+      border-bottom: 1px solid #aaa;
+      margin-bottom: .5em;
+  }
+
+  /* CUSTOM LINK STYLES */
+
+    .link1 {
+      color: var(--link-color);
+      padding: var(--link-pad);
+      border-radius: var(--link-rad);
+    }
+    .link1:active {
+      text-decoration: none;
+      /*color: var(--link-bkg);*/
+      color: var(--link-act);
+    }
+
+    .link2 {
+      color: var(--link-color);
+      text-decoration: none;
+      padding: var(--link-pad);
+      border-radius: var(--link-rad);
+    }
+    .link2:active {
+      background: var(--link-active);
+      color: var(--link-sel);
+    }
+
+    .link3 {
+      color: var(--link-color);
+      text-decoration: none;
+      padding: var(--link-pad);
+      border-radius: var(--link-rad);
+   }
+    .link3:active {
+      background: var(--link-active);
+      color: var(--link-sel);
+    }
+    .link3:hover {
+      text-decoration: underline;
+    }
+
+    .link4 {
+      color: var(--link-color);
+      text-decoration: none;
+      padding: var(--link-pad);
+      border-radius: var(--link-rad);
+    }
+    .link4:active {
+      color: var(--link-sel);
+      text-decoration: underline;
+    }
+    .link4:hover {
+      background: var(--link-hov);
+      color: var(--link-sel);
+    }
+
+    .link5 {
+      background-color: var(--button-bkg);
+      border: none;
+      color: var(--button-clr);
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: var(--button-rad);
+    }
+    .link5:hover {
+      color: var(--button-hov);
+      background: var(--button-hov-bg);
+    }
+
+    /* END FORM STYLES LIGHT */
+
