@@ -170,7 +170,7 @@
   /* ACCORDION */
 
   details {
-      border: 1px solid #aaa;
+      border: thin solid var(--borders);
       border-radius: 5px;
       padding: .5em .5em 0;
       width: 300px;
@@ -188,7 +188,7 @@
       padding: .5em;
   }
   details[open] summary {
-      border-bottom: 1px solid #aaa;
+      border-bottom: thin solid var(--borders);
       margin-bottom: .5em;
   }
 

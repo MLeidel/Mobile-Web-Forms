@@ -7,7 +7,7 @@
 	<meta http-equiv="pragma" content="no-cache">
 	<title>formslight</title>
 	<link rel="stylesheet" href="layout.css"> <!-- must be first -->
-	<link rel="stylesheet" href="custom.css">
+	<link rel="stylesheet" href="custom.css?aa">
  </head>
 
 <body id="BOD">
@@ -49,8 +49,9 @@
 
 		<div id="pgcolm1" class="flex-item">
 
-<h1>formstyles light</h1><br>
-Standard HTML form tags and <b>formslight.css</b><br><br>
+<h1>formstyles Custom</h1><br>
+Standard HTML form tags and <b>custom.css</b><br>
+<i>used formslight.css as base</i><br><br>
 <input type="checkbox" id="cb">
 <label for="cb">CSS is Awesome</label>
 <br>

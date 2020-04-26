@@ -6,9 +6,8 @@
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="pragma" content="no-cache">
 	<title>formslight</title>
-	<link rel="stylesheet" href="layout.css?r"> <!-- must be first -->
-	<link rel="stylesheet" href="formslight.css?rrxe">
-	<!--<script type="text/javascript" src="../../js/myJS-1.2.min.js"></script>-->
+	<link rel="stylesheet" href="layout.css"> <!-- must be first -->
+	<link rel="stylesheet" href="formslight.css?abcd">
  </head>
 
 <body id="BOD">
@@ -42,7 +41,6 @@
 	<h2>CSS Form Styling Demo</h2>
 	</center>
 	</div>
-
 
 <!-- ############## MAIN COLUMNS IN FLEX CONTAINER ################ -->
 
@@ -201,7 +199,6 @@ Phasellus scelerisque sodales condimentum.
 		<!-- <input type="button" onclick="changeBkgd();" value="Change Background"> -->
 	</div>
 
-<link rel="stylesheet" href="formslight.css">
 </body>
 </html>
 

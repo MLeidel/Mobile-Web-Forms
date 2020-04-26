@@ -7,7 +7,7 @@
 	<meta http-equiv="pragma" content="no-cache">
 	<title>formsdark</title>
 	<link rel="stylesheet" href="layout.css"> <!-- must be first -->
-	<link rel="stylesheet" href="formsdark.css">
+	<link rel="stylesheet" href="formsdark.css?a">
 
   <style>
   	body {
@@ -206,7 +206,6 @@ Phasellus scelerisque sodales condimentum.
 		Flexbox Mobile Web Template
 		<!-- <input type="button" onclick="changeBkgd();" value="Change Background"> -->
 	</div>
-
 
 </body>
 </html>
