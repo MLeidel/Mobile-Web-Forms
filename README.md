@@ -7,3 +7,14 @@ The `layout.css` file consists of a mobile menu system and a dynamic two column 
 The other css files use global variables for ease of alteration. For instance, formslight.css was used to 
 create custom.css and custom.php has only minor textual changes.
 
+- **`index.php`**  
+  Home page of demo uses `layout.css`
+- **`layout.css`**  
+  mobile 2 column with menu  
+  used by each page
+- **`formslight.php`**  
+  uses `formslight.css`
+- **`formsdark.php`**  
+  uses `formsdark.css`
+- **`custom.php`**  
+  uses `custom.css`
